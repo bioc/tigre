@@ -62,8 +62,9 @@ website. Installing in this way should ensure that all appropriate
 dependencies are met.
 
 << eval=FALSE >>==
-source("http://www.bioconductor.org/biocLite.R")
-biocLite("tigre")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("tigre")
 @
 
 % To install the tigre software, unpack the software and run
