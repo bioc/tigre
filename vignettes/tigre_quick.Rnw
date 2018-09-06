@@ -57,9 +57,8 @@ paper~\cite{Honkela2010PNAS}\footnote{Note that the results reported
 \subsection{Installing the \tigre{} package}
 
 The recommended way to install \tigre{} is to use the
-\Rfunction{biocLite} function available from the bioconductor
-website. Installing in this way should ensure that all appropriate
-dependencies are met.
+\Rfunction{BiocManager::install} function. Installing in this way
+should ensure that all appropriate dependencies are met.
 
 << eval=FALSE >>==
 if (!requireNamespace("BiocManager", quietly=TRUE))
