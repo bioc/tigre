@@ -58,8 +58,9 @@ dependencies are met.
 
 \begin{Schunk}
 \begin{Sinput}
-> source("http://www.bioconductor.org/biocLite.R")
-> biocLite("tigre")
+> if (!requireNamespace("BiocManager", quietly=TRUE))
+    > install.packages("BiocManager")
+> BiocManager::install("tigre")
 \end{Sinput}
 \end{Schunk}
 
