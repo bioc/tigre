@@ -193,7 +193,7 @@ modelTieParam <- function (model, paramsList) {
   invM <- try (chol2inv(Ch), silent=TRUE)
   options(ow)
 
-  if ( class(invM) == "try-error" ) {
+  if ( "try-error" %in% class(invM) ) {
     return (list(invM=NaN))
   }
   else {
