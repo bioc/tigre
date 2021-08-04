@@ -361,7 +361,7 @@ multiKernParamInit <- function (kern) {
 
   kern$fixBlocks <- rep(FALSE, kern$numBlocks)
   if ("options" %in% names(kern) && "fixedBlocks" %in% names(kern$options)
-      && kern$options$fixedBlocks) {
+      && !is.null(kern$options$fixedBlocks)) {
     kern$fixBlocks[kern$options$fixedBlocks] <- TRUE
     kern$cache <- new.env(parent=emptyenv())
     assign("cache", list(list(list())), envir=kern$cache)
